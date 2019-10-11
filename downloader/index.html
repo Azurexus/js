@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <title>загрузчик</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <div class="main__box">
+        <div class="top__box">
+            <h1>Выберите изображение</h1>
+            <p id='demo'>или</p>
+            <progress value="0" max="100">0%</progress>
+            <label class="label-input" for="input">Выберите файл</label>
+            <input class="btn" id="input" type="file" accept=".png, .jpg, .psd" name="input" value="выбрать файл" multiple >
+        </div>
+        <div class="sort">
+            <p>text</p>
+        </div>
+        <ul id="sortable">
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+            <li class="ui-state-default"></li>
+        </ul>
+    <script>
+      $( function() {
+        $( "#sortable" ).sortable();
+        $( "#sortable" ).disableSelection();
+      } );
+  </script>
+    <script src="javascript.js"></script>
+
+</body>
+</html>

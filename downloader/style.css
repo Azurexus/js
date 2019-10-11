@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+}
+.bot_boxes {
+    display: flex;
+}
+.box__file {
+    width: 90px;
+    height: 120px;
+    background: grey;
+    margin: 10px 10px;
+}
+.btn {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.label-input {
+    width: 180px;
+    height: 50px;
+    border-radius: 4px;
+    text-align: center;
+    margin: 25px;
+    cursor: pointer;
+    display: block;
+    font: 14px/50px Tahoma;
+    transition: all 0.18s ease-in-out;
+    border: 1px solid #4FD666;
+    background: #3EC97A;
+    color: #fff;
+}
+.label-input:hover {
+    color: #fff;;
+    background: #4FD666;
+}
+.democlass {
+    font-size: 20px;
+    margin: 0;
+
+}
+.sort {
+    margin: 10px 0
+}
+#sortable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 450px;
+}
+#sortable li {
+    margin: 3px 3px 3px 0;
+    padding: 1px;
+    float: left;
+    width: 100px;
+    height: 120px;
+    font-size: 4em;
+    text-align: center;
+    border: 1px solid;
+    overflow: hidden;
+}
