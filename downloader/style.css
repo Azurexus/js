@@ -4,26 +4,27 @@
 .bot_boxes {
     display: flex;
 }
-.box__file {
-    width: 90px;
-    height: 120px;
-    background: grey;
-    margin: 10px 10px;
+.top__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.btn {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
+.h1 {
+    color: #4FD666;
+    text-transform: uppercase;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .label-input {
     width: 180px;
     height: 50px;
     border-radius: 4px;
     text-align: center;
-    margin: 25px;
     cursor: pointer;
     display: block;
     font: 14px/50px Tahoma;
@@ -31,6 +32,7 @@
     border: 1px solid #4FD666;
     background: #3EC97A;
     color: #fff;
+    margin-top: 20px;
 }
 .label-input:hover {
     color: #fff;;
@@ -41,23 +43,32 @@
     margin: 0;
 
 }
-.sort {
-    margin: 10px 0
+#dropbox {
+    height: 200px;
+    width: 100%;
+    border: 5px dashed #4FD666;
 }
 #sortable {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    width: 450px;
+    width: 100%;
 }
+
 #sortable li {
-    margin: 3px 3px 3px 0;
-    padding: 1px;
-    float: left;
+    margin: 10px 10px;
     width: 100px;
     height: 120px;
     font-size: 4em;
-    text-align: center;
+    border: 5px solid #3EC97A;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.images {
+    width: 130px;
     border: 1px solid;
     overflow: hidden;
 }

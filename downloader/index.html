@@ -12,37 +12,24 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <div class="main__box">
-        <div class="top__box">
-            <h1>Выберите изображение</h1>
-            <p id='demo'>или</p>
-            <progress value="0" max="100">0%</progress>
-            <label class="label-input" for="input">Выберите файл</label>
-            <input class="btn" id="input" type="file" accept=".png, .jpg, .psd" name="input" value="выбрать файл" multiple >
+        <div id="dropbox">
+            <div class="top__box">
+                <h1 class="h1">Загрузите изображение</h1>
+                <form class="form" action="index.html" method="post">
+                    <progress id="progressBar" value="0" max="100"></progress>
+                    <span id="progPer"></span>
+                    <label class="label-input" for="input">Выберите файл</label>
+                    <input class="btn" id="input" type="file" accept=".png, .jpg, .psd" name="input" value="выбрать файл" multiple >
+                    <!-- <h3 id="status"></h3>
+                    <p id="loaded_n_total"></p> -->
+                </form>
+            </div>
         </div>
-        <div class="sort">
-            <p>text</p>
-        </div>
+        <output id="list"></output>
         <ul id="sortable">
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-            <li class="ui-state-default"></li>
-        </ul>
-    <script>
-      $( function() {
-        $( "#sortable" ).sortable();
-        $( "#sortable" ).disableSelection();
-      } );
-  </script>
-    <script src="javascript.js"></script>
 
+        </ul>
+    </div>
+    <script src="javascript.js"></script>
 </body>
 </html>
