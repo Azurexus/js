@@ -38,11 +38,6 @@
     color: #fff;;
     background: #4FD666;
 }
-.democlass {
-    font-size: 20px;
-    margin: 0;
-
-}
 #dropbox {
     height: 200px;
     width: 100%;
@@ -61,14 +56,14 @@
 #sortable li {
     margin: 10px 10px;
     width: 100px;
-    height: 120px;
+    height: 100px;
     font-size: 4em;
     border: 5px solid #3EC97A;
     border-radius: 10px;
     overflow: hidden;
+    background: #fff;
 }
 .images {
-    width: 130px;
-    border: 1px solid;
-    overflow: hidden;
+    width: 100px;
+
 }
