@@ -14,25 +14,40 @@ function handleFiles(files) {
         if (file.type.match(imageType)) {
             let reader = new FileReader();
 
-            reader.onload = function handleFiles(e) {
+            reader.onload = function(e) {
 
                 let li = document.createElement("li");
                 boxes.appendChild(li);
+
+                let div = document.createElement("div");
+                li.appendChild(div);
 
                 let img = new Image();
                 img.src = reader.result;
 
 
-                li.appendChild(img);
+                li.appendChild(div);
+                div.appendChild(img);
+                div.setAttribute("class", "divs");
                 img.setAttribute("class", "images");
-                document.getElementById('progressBar').value = 0;
-                document.getElementById('progPer').innerText = '';
+                
 
             }
-            reader.onprogress = function handleFiles(e) {
+            reader.onprogress = function(e) {
+
+                let mass = [];
+                mass = mass.push(reader);
+                for (var i = 0; i < mass.length; i++) {
+
+                    console.log(i);
+
+                }
+
+
                 let math = Math.round((e.loaded / e.total) * 100);
                 document.getElementById('progressBar').value = math;
                 document.getElementById('progPer').innerText = math + '%';
+
             }
 
             reader.readAsDataURL(file);
@@ -45,6 +60,7 @@ function handleFiles(files) {
 inputFile.addEventListener('change', function(e) {
     handleFiles(e.target.files)
 });
+
 
 let dropbox;
 
@@ -62,13 +78,14 @@ function dragenter(e) {
 function dragover(e) {
   e.stopPropagation();
   e.preventDefault();
+  console.log('over');
 
 }
 
 function drop(e) {
   e.stopPropagation();
   e.preventDefault();
-
+console.log('drop');
   let dt = e.dataTransfer;
   let files = dt.files;
 
@@ -86,6 +103,9 @@ function returnFileSize(number) {
 }
 
 $( function() {
-  $( "#sortable" ).sortable();
+  $( "#sortable" ).sortable({
+  revert: true
+});
+
   $( "#sortable" ).disableSelection();
 } );
